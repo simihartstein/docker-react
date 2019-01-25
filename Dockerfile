@@ -7,5 +7,6 @@ RUN npm run build
 
 # /app/build has the app
 FROM nginx
+EXPOSE 80
 COPY --from=builder /app/build /usr/share/nginx/html
 # enginex is started by default in nginx container
